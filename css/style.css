@@ -1,3 +1,12 @@
+:root{
+    --primary: red;
+    --secondary: black;
+    --background: rgba(9,148,255,0.5);
+    --shadow1: rgba(9,148,255,0.05);
+    --shadow2: rgba(9,148,255,0.25);
+    --shadow3: rgba(9,148,255,0.5);
+}
+
 p,span,h1,h2,h3,h4,h5,h6, .nav-link {
     font-family: 'Quicksand', Arial, Helvetica, sans-serif !important;
 }
@@ -24,16 +33,55 @@ body {
     object-fit: cover;
 }
 
-.name-span{
-    font-size: 1em;
-    font-weight: 700;
-    text-align: center;
-    color: #212529;
+.dp__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+    padding: 30px;
+    margin-bottom: 50px;
+    box-shadow: 25px 25px 50px rgba(9,148,255,0.25),
+        -10px -10px 30px rgba(9,148,255,0.1),
+        inset -5px -5px 15px rgba(9,148,255,0.5);
 }
-
+.dp__card h3{
+    margin-top: 40px;
+    background: var(--shadow2);
+    padding: 5px 10px;
+    border-radius: 0 10px 0 10px;
+    color: rgb(7, 120, 206);
+    font-weight: bolder;
+    box-shadow: 10px 10px 20px rgba(9,148,255,0.25),
+        -5px -5px 15px rgba(9,148,255,0.1),
+        inset -2px -2px 5px rgba(9,148,255,0.5);
+}
+.dp__card span{
+    font-weight: 600;
+    color: var(--shadow3);
+}
+.dp__card a {
+    text-decoration: none
+}
+.dp__card .fa {
+    min-width: 38px;
+    min-height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    padding: 5px 5px;
+    box-shadow: 2px 2px 5px rgba(9,148,255,0.25),
+        -1px -1px 3px rgba(9,148,255,0.1),
+        inset -1px -1px 3px rgba(9,148,255,0.5);
+}
+.dp__card .fa:hover{
+    box-shadow: 2px 2px 5px rgba(255, 120, 9, 0.25),
+        -1px -1px 3px rgba(9,148,255,0.1),
+        inset -1px -1px 3px rgba(255, 120, 9, 0.25);
+}
 .title {
     text-align: center;
-    background-color:#212529;
+    background-color:var(--background);
     color: whitesmoke;
 }
 
@@ -51,30 +99,35 @@ section {
 }
 
 #education, #achievement, #projects, #experience {
-    background-color: #212529 ;
-    color: antiquewhite;
+    background-color: var(--shadow2) ;
+    color: black;
 }
 .achievement-item, .education-item, .project-item, .experience-item {
     border-bottom: solid 1px antiquewhite;
 }
 .title {
-    background-color: #2a3c77;
-}
-.title {
+    background-color: var(--background);
     padding-top: 15px;
     padding-bottom: 15px;
+}
+.item-title {
+    color: var(--background);
+    background: white;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 0 10px 0 10px;
 }
 .keep-in-touch {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #212529;
-    color: #fd7314;
+    background-color: var(--background);
+    color: white;
     padding: 1em;
 }
 .social-info {
-    width: 250px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     font-size: xx-large;
